@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  graphiql:
+    #build: .
+    image: graphiql:2.2.3
+    command: gunicorn gpapi.wsgi -c gunicorn_config.py
+    restart: unless-stopped
+    container_name: graphiql
+    volumes:
+      # - ./app:/app
+      - /docker_data/graphiql:/app
+    ports:
+      - "8084:8000"
+
+  
