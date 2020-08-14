@@ -9,8 +9,8 @@ services:
     container_name: graphiql
     volumes:
       # - ./app:/app
-      - /docker_data/graphiql:/app
+      - /docker_data/graphqlapi:/app
     ports:
-      - "8084:8000"
+      - "8086:8000"
 
   
