@@ -1,0 +1,38 @@
+<!--
+The request to this GraphQL server provided the header "Accept: text/html"
+and as a result has been presented GraphiQL - an in-browser IDE for
+exploring GraphQL.
+If you wish to receive JSON, provide the header "Accept: application/json" or
+add "&raw" to the end of the URL within a browser.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body, #editor {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      width: 100%;
+    }
+  </style>
+  <link href="/static/graphql/graphiql.min.css" rel="stylesheet"/>
+  <script src= "/static/graphql/fetch.umd.js"></script>
+  <script src= "/static/graphql/react.production.min.js"></script>
+  <script src= "/static/raphql/react-dom.production.min.js"></script>
+  <script src= "/static/graphql/graphiql.min.js"></script>
+  <script src= "/static/graphql/client.js"></script>
+</head>
+<body>
+  <div id="editor"></div>
+  <input type="hidden" name="csrfmiddlewaretoken" value="pQo5dFXcIEGQuJoFBIFzFPYxf0ppIUDbyVFJQAtsxf2PCHNNz7yXYAvQWHwn2Kzd">
+  <script type="application/javascript">
+    window.GRAPHENE_SETTINGS = {
+
+      graphiqlHeaderEditorEnabled: true,
+    };
+  </script>
+  <script src= "/static/graphql/graphiql.js"></script>
+</body>
+</html>
