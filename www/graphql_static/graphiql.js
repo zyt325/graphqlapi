@@ -71,7 +71,8 @@
     if (csrftoken) {
       headers['X-CSRFToken'] = csrftoken
     }
-    return fetch(fetchURL, {
+    //return fetch(fetchURL, {
+    return fetch("/graphql/", {
       method: "post",
       headers: headers,
       body: JSON.stringify(graphQLParams),
